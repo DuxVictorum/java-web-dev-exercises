@@ -19,7 +19,7 @@ public class MenuItem {
         this(description, category, 0.0, false);
     }
 
-//    Getter / Setter Salad
+//    Getter & Setter Salad
     public String getDescription() { return this.description; }
     public void setDescription(String newDescription) {
         this.description = newDescription;
@@ -39,4 +39,20 @@ public class MenuItem {
     public void setNewItem(boolean isNew) {
         this.newItem = isNew;
     }
+
+    //    Methods
+    @Override
+    public String toString() {
+        return this.description + " (" + this.category + ")" +
+                "\n\tPrice: " + this.price;
+    }
+    @Override
+    public boolean equals(Object toCompare) {
+        if (toCompare == this) { return true; }
+        else if (toCompare == null) { return false; }
+        else if (toCompare.getClass() != this.getClass()) { return false; }
+        MenuItem theItem = (MenuItem) toCompare;
+        return theItem.getDescription() == this.getDescription() && theItem.getPrice() == this.getPrice();
+    }
+
 }
