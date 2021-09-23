@@ -14,6 +14,7 @@ public class TestInheritance {
     public void createTestCat() {
         test_cat = new HouseCat("Farfy", 11);
     }
+
     @Test
     public void testName() {
         assertEquals("Farfy", test_cat.getName());
