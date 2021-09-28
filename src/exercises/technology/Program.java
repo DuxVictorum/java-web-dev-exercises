@@ -5,6 +5,10 @@ public class Program {
 
     public static void main(String[] args) {
 
+        Computer compy = new Computer("Gateway 2000", 17, 1000, "Windows");
+        System.out.println(compy.getUniqueID());
+        System.out.println(AbstractEntity.getLastID());
+
         Laptop oldLappy = new Laptop("HP Pavilion", 14.7, 260, "Windows");
         System.out.println(oldLappy.getUniqueID());
         System.out.println(AbstractEntity.getLastID());
@@ -13,8 +17,5 @@ public class Program {
         System.out.println(pixel.getUniqueID());
         System.out.println(AbstractEntity.getLastID());
 
-        Computer compy = new Computer("Gateway 2000", 17, 1000, "Windows");
-        System.out.println(compy.getUniqueID());
-        System.out.println(AbstractEntity.getLastID());
     }
 }

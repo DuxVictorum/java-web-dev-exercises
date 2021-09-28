@@ -17,10 +17,6 @@ public class Laptop extends Computer{
 
     public Laptop (String name, double screenSize, double maxStorageGB, String osType) {
         super(name, screenSize, maxStorageGB, osType);
-        this.laptopName = name;
-        this.laptopScreenSize = screenSize;
-        this.laptopMaxStorageGB = maxStorageGB;
-        this.laptopOsType = osType;
         this.laptopCurrentStorageGB = 80.0;
         this.laptopPrograms = new ArrayList<>(Arrays.asList("Dungeon Of The Endless"));
         this.laptopComputerOn = false;
@@ -28,8 +24,7 @@ public class Laptop extends Computer{
         for (String oApp : this.officeApps) {
             laptopPrograms.add(oApp);
         }
-        this.uniqueID = AbstractEntity.lastID + 1;
-        AbstractEntity.lastID += 1;
+        this.uniqueID = AbstractEntity.lastID;
     }
     public ArrayList<String> getOfficeApps() { return this.officeApps; }
     public void runOffice(String chosenApp) {

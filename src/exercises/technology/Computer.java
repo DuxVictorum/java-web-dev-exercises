@@ -20,8 +20,8 @@ public class Computer extends AbstractEntity{
         this.currentStorageGB = 0.0;
         this.programs = new ArrayList<>();
         this.computerOn = false;
-        this.uniqueID = AbstractEntity.lastID + 1;
         AbstractEntity.lastID += 1;
+        this.uniqueID = AbstractEntity.lastID;
     }
 
 //    Getter & Setter Salad
@@ -35,7 +35,7 @@ public class Computer extends AbstractEntity{
     public String getOsType() { return osType; }
     public void setOsType(String newOS) { osType = newOS; }
     public ArrayList<String> getPrograms() { return programs; }
-    public Integer getUniqueID() { return this.uniqueID; }
+    public Integer getUniqueID() { return uniqueID; }
 
     //    Methods
     public void printPrograms(ArrayList<String> programsArr) {

@@ -16,8 +16,7 @@ public class SmartPhone extends Computer {
         this.callLog = new HashMap<>();
         this.currentStorageGB = 12.0;
         this.phoneOn = false;
-//        this.uniqueID = AbstractEntity.lastID + 1;
-//        AbstractEntity.lastID += 1;
+        this.uniqueID = AbstractEntity.lastID;
     }
 //  Getter & Setter Salad
     @Override
